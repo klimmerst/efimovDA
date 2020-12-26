@@ -3,13 +3,23 @@ This module implements some functions based on linear search algo
 """
 from typing import Sequence
 
+test = [10, 2, 0, 0]
 
 def min_search(arr: Sequence) -> int:
-    """
-    Function that find minimal element in array
 
-    :param arr: Array containing numbers
-    :return: index of first occurrence of minimal element in array
-    """
-    print(arr)
-    return -1
+    if not arr:
+        return - 1
+
+    min = 0
+    index = 0
+
+    for i in range(len(arr)):
+        if arr[i] < min:
+            min = arr[i]
+            index = i
+        print(i)
+
+
+    return index
+
+print(min_search(test))
