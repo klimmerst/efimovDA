@@ -11,7 +11,7 @@ def min_search(arr: Sequence) -> int:
         return - 1
 
     min = 0
-    index = 0
+    index = arr[0]
 
     for i in range(len(arr)):
         if arr[i] < min:
